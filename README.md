@@ -3,6 +3,8 @@
 
 Tic Tac Toe Using Java.Swing JOptionPane
 
+# Player vs. Computer Mode
+
 ![image](https://user-images.githubusercontent.com/94807175/161335700-b4a5be5b-b9e3-40da-8a07-58077ea902a5.png)
 
 
@@ -22,5 +24,23 @@ Tic Tac Toe Using Java.Swing JOptionPane
 
 
 ![image](https://user-images.githubusercontent.com/94807175/161336212-6377d87d-df00-4bb1-8c46-d771ce4b95da.png)
+
+
+# Two Player Mode
+
+![image](https://user-images.githubusercontent.com/94807175/161336718-d7be545a-b3f3-4e73-b1ba-b5ec9f874b51.png)
+
+
+![image](https://user-images.githubusercontent.com/94807175/161336767-f0e38fb6-1547-4038-bce8-e32d4750d768.png)
+
+
+![image](https://user-images.githubusercontent.com/94807175/161336913-ae500280-b502-4c18-b901-c21f96aa27f9.png)
+
+
+![image](https://user-images.githubusercontent.com/94807175/161336988-4aeb0263-a459-40b0-a4ab-298f8315d174.png)
+
+
+![image](https://user-images.githubusercontent.com/94807175/161337040-84d8627b-42cc-4159-924a-edac5141374d.png)
+
 
 
