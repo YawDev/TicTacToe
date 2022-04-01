@@ -1,0 +1,5 @@
+package com.tic.tac.toe.board;
+
+public class PlayerOne extends Player {
+
+}

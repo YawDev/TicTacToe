@@ -1,0 +1,6 @@
+package com.tic.tac.toe.board;
+
+public class Player {
+	
+	protected char _marker;
+}

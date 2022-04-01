@@ -1,0 +1,6 @@
+package com.tic.tac.toe.board;
+
+public class PlayerTwo extends Player{
+	protected int Number = 2;
+
+}

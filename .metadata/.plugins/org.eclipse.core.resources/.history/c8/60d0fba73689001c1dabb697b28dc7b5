@@ -1,0 +1,21 @@
+package com.tic.tac.toe.board;
+
+import com.tic.tac.toe.exceptions.OccupiedException;
+
+public class program {
+
+	public static void main(String[] args) {
+		Board board = new Board();
+		board.CreateBoard();
+		board.Display();
+		try {
+			board.AssignPosition('x', 0, 0);
+			board.Display();
+		} catch (OccupiedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

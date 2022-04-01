@@ -1,0 +1,9 @@
+package com.tic.tac.toe.exceptions;
+
+public class OccupiedException extends Exception{
+	
+	 public OccupiedException(String errorMessage) {
+	        super(errorMessage);
+	    }
+
+}

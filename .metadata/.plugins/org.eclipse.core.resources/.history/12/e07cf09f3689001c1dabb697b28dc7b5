@@ -1,0 +1,12 @@
+package com.tic.tac.toe.board;
+
+public class program {
+
+	public static void main(String[] args) {
+		Board board = new Board();
+		board.CreateBoard();
+		board.Display();
+		
+	}
+
+}

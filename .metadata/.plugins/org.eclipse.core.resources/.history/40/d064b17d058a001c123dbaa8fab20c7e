@@ -1,0 +1,136 @@
+package com.tic.tac.toe.board;
+
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+import com.tic.tac.toe.exceptions.OccupiedException;
+
+public class Board {
+	
+
+	char[][] Board;
+	
+	public Board() {
+		super();
+		Board = new char[3][3];
+	}
+
+	public char[][] CreateBoard()
+	{
+		for(int row =0;row<3;row++ )
+		{	for(int col=0;col <3;col++)
+			{
+				Board[row][col] = '_';
+			}
+		}
+		return Board;
+	}
+	
+	public String Display()
+	{
+		StringBuilder sb = new StringBuilder();
+		for(int i=0;i<Board.length;i++)
+		{	for(int j=0;j<Board.length;j++)
+			{
+				sb.append(Board[i][j]).append("     ");
+			}
+			sb.append("\n").append("\n");
+		}
+		return sb.toString();
+	}
+	
+	
+	public void AssignPosition(char marker,int row, int column) throws OccupiedException
+	{
+	
+		if(slotIsEmpty(row,column))
+		{	
+			Board[row][column] = marker; return;
+		}
+		throw new OccupiedException("Slot is already filled.");
+		
+	}
+	
+	
+	public void SlotSelect(char marker ,String slot) throws OccupiedException
+	{
+		switch(slot)
+		{
+			case "1":
+				AssignPosition(marker, 0,0);
+				break;
+			case "2":
+				AssignPosition(marker, 0,1);
+				break;
+			case "3":
+				AssignPosition(marker, 0,2);
+				break;
+			case "4":
+				AssignPosition(marker, 1,0);
+				break;
+			case "5":
+				AssignPosition(marker, 1,1);
+				break;
+			case "6":
+				AssignPosition(marker, 1,2);
+				break;
+			case "7":
+				AssignPosition(marker, 2,0);
+				break;
+			case "8":
+				AssignPosition(marker, 2,1);
+				break;
+			case "9":
+				AssignPosition(marker, 2,2);
+				break;
+			case "Spot is occupied.":
+				throw new OccupiedException("Slot is already filled.");
+	
+		}
+	}
+	
+	public boolean slotIsEmpty(int row,int column)
+	{
+		return (Board[row][column] == '_');
+	}
+	
+	public boolean HorizontalWinner(char marker)
+	{
+		if((Board[0][0] == marker) && Board[0][1] == marker && Board[0][2] == marker)
+			return true;
+		
+		if((Board[1][0] == marker) && Board[1][1] == marker && Board[1][2] == marker)
+			return true;
+		
+		if((Board[2][0] == marker) && Board[2][1] == marker && Board[2][2] == marker)
+			return true;
+		
+		return false;
+	}
+	
+	public boolean VerticalWinner(char marker)
+	{
+		if((Board[0][0] == marker) && Board[1][0] == marker && Board[2][0] == marker)
+			return true;
+		
+		if((Board[0][1] == marker) && Board[1][1] == marker && Board[2][1] == marker)
+			return true;
+		
+		if((Board[0][2] == marker) && Board[1][2] == marker && Board[2][2] == marker)
+			return true;
+		
+		return false;
+	}
+	
+	public boolean DiagonalWinner(char marker)
+	{
+		if((Board[0][0] == marker) && Board[1][1] == marker && Board[2][2] == marker)
+			return true;
+		
+		if((Board[2][0] == marker) && Board[1][1] == marker && Board[0][2] == marker)
+			return true;
+		
+		return false;
+	}
+
+}

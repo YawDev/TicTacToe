@@ -1,0 +1,5 @@
+package com.tic.tac.toe.exceptions;
+
+public class OccupiedException {
+
+}
